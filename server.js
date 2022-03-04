@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http').Server(app);
 
-http.listen(3000);
+http.listen(process.env.PORT || 3000);
 
 app.set('view engine', 'ejs');
 app.get('/', (req, res)=>{
